@@ -36,4 +36,5 @@ public class One2ManyService {
     public List<School> findAlladdSchools() {
         return schoolDao.findAll();
     }
+
 }

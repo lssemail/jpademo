@@ -7,8 +7,6 @@ import com.demo.common.test.SpringBaseTest;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
-
 /**
  * Created by shuai on 2017/5/8.
  */
@@ -41,7 +39,7 @@ public class One2ManyTest extends SpringBaseTest {
         System.out.println(school.toString());
 
     }
-    @Test
+    //@Test
     public void testCacaedSave() {
         //TODO 这个级连删除有问题 需研究研究
         School school = new School();
@@ -59,5 +57,10 @@ public class One2ManyTest extends SpringBaseTest {
         school.addStudent(student0);
         school.addStudent(student1);
         one2ManyService.addSchool(school);
+    }
+
+    @Test
+    public void test11(){
+        one2ManyService.findAlladdSchools();
     }
 }
